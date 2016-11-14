@@ -1,0 +1,41 @@
+{
+  "name": "adocker-node",
+  "version": "1.0.0",
+  "description": "Docker Node.js",
+  "main": "lib",
+  "scripts": {
+    "test": "node ./ci/test.js",
+    "prepublish": "node ./ci/build.js"
+  },
+  "repository": "a-labo/adocker-node",
+  "keywords": [],
+  "author": {
+    "name": "Taka Okunishi",
+    "email": "okunishinishi@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-labo/adocker-node/issues"
+  },
+  "homepage": "https://github.com/a-labo/adocker-node#readme",
+  "dependencies": {
+    "adocker": "^1.2.0",
+    "co": "^4.6.0"
+  },
+  "devDependencies": {
+    "amocha": "^1.0.16",
+    "ape-formatting": "^1.0.2",
+    "ape-releasing": "^4.0.4",
+    "ape-reporting": "^3.0.2",
+    "ape-tasking": "^4.0.9",
+    "ape-tmpl": "^5.0.20",
+    "ape-updating": "^4.0.5",
+    "coz": "^6.0.20",
+    "injectmock": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  }
+}

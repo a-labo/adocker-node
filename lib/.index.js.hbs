@@ -1,0 +1,17 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ * @version {{pkg.version}}
+ */
+
+'use strict'
+
+const adockerNode = require('./adocker_node')
+
+let lib = adockerNode.bind(this)
+
+Object.assign(lib, adockerNode, {
+  adockerNode
+})
+
+module.exports = lib

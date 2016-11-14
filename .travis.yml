@@ -1,0 +1,19 @@
+sudo: required
+language: node_js
+services:
+- docker
+node_js:
+- '6'
+before_install:
+- sudo apt-get -o Dpkg::Options::="--force-confnew" -y update
+- sudo apt-get -o Dpkg::Options::="--force-confnew" -y install docker-engine
+- npm install -g mocha istanbul
+install:
+- npm install
+before_script:
+- npm link .
+script:
+- ./ci/build.js
+- ./ci/test.js
+- ./ci/cover.js
+- ./ci/report.js
