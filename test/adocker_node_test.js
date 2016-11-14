@@ -20,7 +20,9 @@ describe('adocker-node', function () {
   }))
 
   it('Adocker node', () => co(function * () {
-
+    let { logs, run } = adockerNode({}).cli()
+    assert.ok(logs)
+    assert.ok(run)
   }))
 })
 
