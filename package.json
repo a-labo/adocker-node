@@ -1,6 +1,6 @@
 {
   "name": "adocker-node",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Docker Node.js",
   "main": "lib",
   "scripts": {
