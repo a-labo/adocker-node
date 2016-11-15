@@ -1,6 +1,6 @@
 {
   "name": "adocker-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Docker Node.js",
   "main": "lib",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/a-labo/adocker-node#readme",
   "dependencies": {
-    "adocker": "^1.2.0",
+    "adocker": "^1.2.2",
     "co": "^4.6.0"
   },
   "devDependencies": {
