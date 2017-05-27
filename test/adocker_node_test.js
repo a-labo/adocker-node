@@ -5,11 +5,12 @@
 'use strict'
 
 const adockerNode = require('../lib/adocker_node.js')
-const assert = require('assert')
+const { ok, equal } = require('assert')
+const asleep = require('asleep')
 const co = require('co')
 
 describe('adocker-node', function () {
-  this.timeout(3000)
+  this.timeout(300000)
 
   before(() => co(function * () {
 
@@ -20,9 +21,20 @@ describe('adocker-node', function () {
   }))
 
   it('Adocker node', () => co(function * () {
-    let { logs, run } = adockerNode({}).cli()
-    assert.ok(logs)
-    assert.ok(run)
+    let { logs, build, run, remove } = adockerNode({
+      tag: 'adocker-node-test',
+      workdir: `${__dirname}/../misc/mocks/mock-project-01`,
+      cmd: [ 'pm2', './bin/app.js' ]
+    }).cli()
+    ok(logs)
+    ok(run)
+
+    yield build()
+    yield run()
+
+    yield asleep(1000)
+
+    yield remove({ force: true })
   }))
 })
 

@@ -1,14 +1,16 @@
 {
   "name": "adocker-node",
-  "version": "1.1.5",
+  "version": "2.0.0",
   "description": "Docker Node.js",
   "main": "lib",
   "scripts": {
     "test": "node ./ci/test.js",
-    "prepublish": "node ./ci/build.js"
+    "prepare": "node ./ci/build.js"
   },
   "repository": "a-labo/adocker-node",
-  "keywords": [],
+  "keywords": [
+    "docker"
+  ],
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
@@ -32,6 +34,7 @@
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.20",
     "ape-updating": "^4.0.5",
+    "asleep": "^1.0.3",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0"
   },
