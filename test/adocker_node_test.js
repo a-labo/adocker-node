@@ -21,7 +21,8 @@ describe('adocker-node', function () {
   }))
 
   it('Adocker node', () => co(function * () {
-    let { logs, build, run, remove } = adockerNode({
+    let { logs, purge, build, run, remove } = adockerNode('testing-adocker-node', {
+      image: 'node:6',
       tag: 'adocker-node-test',
       workdir: `${__dirname}/../misc/mocks/mock-project-01`,
       cmd: [ 'node', './bin/app.js' ]
