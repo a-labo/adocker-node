@@ -24,7 +24,7 @@ describe('adocker-node', function () {
     let { logs, build, run, remove } = adockerNode({
       tag: 'adocker-node-test',
       workdir: `${__dirname}/../misc/mocks/mock-project-01`,
-      cmd: [ 'pm2', './bin/app.js' ]
+      cmd: [ 'node', './bin/app.js' ]
     }).cli()
     ok(logs)
     ok(run)
