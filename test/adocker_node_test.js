@@ -21,7 +21,7 @@ describe('adocker-node', function () {
   }))
 
   it('Adocker node', () => co(function * () {
-    let { logs, purge, build, run, remove } = adockerNode('testing-adocker-node', {
+    let { logs, purge, build, run, remove, hasContainer, isRunning, exec } = adockerNode('testing-adocker-node', {
       image: 'node:6',
       tag: 'adocker-node-test',
       workdir: `${__dirname}/../misc/mocks/mock-project-01`,
@@ -32,6 +32,10 @@ describe('adocker-node', function () {
 
     yield build()
     yield run()
+
+    // ok(yield hasContainer())
+    // ok(yield isRunning())
+
 
     yield asleep(1000)
 
